@@ -1,7 +1,7 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css");
 .movie-container {
   flex: wrap;
-  background-color: #f0f6f7ff;
+  background-color: #b3c7d6ff;
   width: 600px;
   display: flex;
   grid-template-columns: 1fr 2fr;
@@ -61,19 +61,24 @@
   text-decoration: none;
   border-radius: 10px;
 }
+
+.button {
+  margin-left: 300px;
+}
+
 .info .button:hover {
   background-color: #fadb68;
   transition: all 0.3s;
 }
 
 .action_container {
+  margin-top: 80px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
 }
 
 .action_container i {
-  color: #ccc;
+  color: #d9b48fff;
   font-size: 20px;
   cursor: pointer;
 }

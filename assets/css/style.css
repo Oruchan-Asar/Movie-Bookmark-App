@@ -2,12 +2,11 @@
 @import url("https://fonts.googleapis.com/css?family=Exo+2:400,700&display=swap");
 
 body {
-  overflow-y: auto;
   font-family: "Exo 2", sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #f0f6f7ff;
+  background-color: #85b3d1ff;
 }
 
 #app {
@@ -18,21 +17,18 @@ body {
 }
 
 .search_text {
-  display: flex;
-  flex-wrap: wrap;
   border: 1px solid #ccc;
   padding: 10px 20px;
   font-size: 18px;
   outline: none;
-  color: #fcf6f5ff;
+  color: #666;
   width: 300px;
   margin-bottom: 20px;
 }
 
 svg {
-  display: block;
   height: 20px;
-  width: 20px;
+  width: 50px;
   margin: -50px;
   margin-left: 250px;
 }
