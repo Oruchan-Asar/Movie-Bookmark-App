@@ -2,8 +2,9 @@
 @import url("https://fonts.googleapis.com/css?family=Exo+2:400,700&display=swap");
 
 body {
-  background: url(/assets/images/movie_night.png);
+  background: url(/assets/images/movie_night.svg);
   background-repeat: no-repeat;
+  background-attachment: fixed;
   background-size: 1200px;
   background-position-x: center;
   font-family: "Exo 2", sans-serif;

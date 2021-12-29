@@ -23,10 +23,13 @@ headerTemplate.innerHTML = `
               <a class="nav-link active" aria-current="page" href="#">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">My favourites</a>
+              <a class="nav-link" href="#">Favourites</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Log-in</a>
+              <a class="nav-link" href="#">Bookmarks</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/login/login.html">Log-in</a>
             </li>
           </ul>
         </div>
