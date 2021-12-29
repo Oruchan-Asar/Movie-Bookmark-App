@@ -14,10 +14,12 @@ template.innerHTML = `
         </p>
         <div class="action_container">
             <i class="isFavourite fa fa-heart"></i>
+            <i class="isBookmarked fas fa-bookmark"></i>
             <a target="_blank" class="button">IMDb</a>
         </div>
-    </div>
+        <div class="bs-example">
 </div>
+    </div>
 `;
 
 class MovieCard extends HTMLElement {
@@ -25,6 +27,7 @@ class MovieCard extends HTMLElement {
     super();
 
     this.isFavourite = false;
+    this.isBookmarked = false;
 
     this.attachShadow({ mode: "open" });
     this.shadowRoot.appendChild(template.content.cloneNode(true));
@@ -46,6 +49,12 @@ class MovieCard extends HTMLElement {
           .querySelector(".isFavourite")
           .classList.add("is_favourite");
       }
+      if (this.getAttribute("isBookmarked") == "true") {
+        this.isBookmarked = true;
+        this.shadowRoot
+          .querySelector(".isBookmarked")
+          .classList.add("is_bookmarked");
+      }
     }, 100);
   }
 
@@ -63,11 +72,31 @@ class MovieCard extends HTMLElement {
     }
   }
 
+  bookToggle() {
+    this.isBookmarked = !this.isBookmarked;
+
+    if (this.isBookmarked) {
+      this.shadowRoot
+        .querySelector(".isBookmarked")
+        .classList.add("is_bookmarked");
+    } else {
+      this.shadowRoot
+        .querySelector(".isBookmarked")
+        .classList.remove("is_bookmarked");
+    }
+  }
+
   connectedCallback() {
     this.shadowRoot
       .querySelector(".isFavourite")
       .addEventListener("click", () => {
         this.favToggle();
+      });
+
+    this.shadowRoot
+      .querySelector(".isBookmarked")
+      .addEventListener("click", () => {
+        this.bookToggle();
       });
   }
 
@@ -75,6 +104,10 @@ class MovieCard extends HTMLElement {
     this.shadowRoot
       .querySelector(".isFavourite")
       .removeEventListener("click", this.favToggle());
+
+    this.shadowRoot
+      .querySelector(".isBookmarked")
+      .removeEventListener("click", this.bookToggle());
   }
 }
 

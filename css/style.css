@@ -2,6 +2,10 @@
 @import url("https://fonts.googleapis.com/css?family=Exo+2:400,700&display=swap");
 
 body {
+  background: url(/assets/images/movie_night.png);
+  background-repeat: no-repeat;
+  background-size: 1200px;
+  background-position-x: center;
   font-family: "Exo 2", sans-serif;
   margin: 0;
   padding: 0;
@@ -14,23 +18,26 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin-top: 10px;
 }
 
 .search_text {
+  display: flex;
+  flex: wrap;
   border: 1px solid #ccc;
   padding: 10px 20px;
   font-size: 18px;
   outline: none;
   color: #666;
-  width: 300px;
   margin-bottom: 20px;
+  width: 370px;
 }
 
 svg {
-  height: 20px;
+  height: 23px;
   width: 50px;
-  margin: -50px;
-  margin-left: 250px;
+  margin: -55px;
+  margin-left: 260px;
 }
 
 svg:hover {

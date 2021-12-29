@@ -2,7 +2,6 @@
 .movie-container {
   flex: wrap;
   background-color: #b3c7d6ff;
-  width: 600px;
   display: flex;
   grid-template-columns: 1fr 2fr;
   border: 1px solid #a89c94ff;
@@ -11,6 +10,7 @@
   transition: all 0.2s;
   border-radius: 5px;
   margin-bottom: 10px;
+  max-width: 600px;
 }
 
 .movie-container:hover {
@@ -56,14 +56,10 @@
   font-weight: bold;
   font-size: 15px;
   outline: none;
-  float: right;
   cursor: pointer;
   text-decoration: none;
   border-radius: 10px;
-}
-
-.button {
-  margin-left: 300px;
+  margin-left: 150px;
 }
 
 .info .button:hover {
@@ -79,7 +75,7 @@
 
 .action_container i {
   color: #d9b48fff;
-  font-size: 20px;
+  font-size: 30px;
   cursor: pointer;
 }
 
@@ -88,4 +84,12 @@
 }
 .action_container i.is_favourite {
   color: #ff0000;
+}
+
+.action_container i.is_bookmarked {
+  color: #ff0000;
+}
+
+.isFavourite {
+  margin-right: 10px;
 }
