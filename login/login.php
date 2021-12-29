@@ -11,7 +11,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="/login/login.css" />
-    <title>Document</title>
+    <title>Movie Bookmark Application - Login</title>
   </head>
   <body>
     <div class="container-fluid ps-md-0">
@@ -25,9 +25,10 @@
                   <h3 class="login-heading mb-4">Welcome back!</h3>
 
                   <!-- Sign In Form -->
-                  <form>
+                  <form name="login" method="POST" action="/../functions.php">
                     <div class="form-floating mb-3">
                       <input
+						name="username"
                         type="text"
                         class="form-control"
                         id="floatingInputUsername"
@@ -39,6 +40,8 @@
                     </div>
                     <div class="form-floating mb-3">
                       <input
+						
+						name="password"
                         type="password"
                         class="form-control"
                         id="floatingPassword"
@@ -65,6 +68,7 @@
 
                     <div class="d-grid">
                       <button
+						name="login"
                         class="
                           btn btn-lg btn-primary btn-login
                           text-uppercase
@@ -76,7 +80,7 @@
                         Sign in
                       </button>
                       <div class="text-center">
-                        <a class="small" href="/register/register.html"
+                        <a class="small"  href="/register/register.php"
                           >Register</a
                         >
                       </div>

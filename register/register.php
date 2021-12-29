@@ -33,7 +33,7 @@
         padding: 0.75rem 1rem;
       }
     </style>
-    <title>Document</title>
+    <title>Movie Bookmark Application - Register</title>
   </head>
   <body>
     <div class="container">
@@ -49,9 +49,10 @@
               <h5 class="card-title text-center mb-5 fw-light fs-5">
                 Register
               </h5>
-              <form>
+              <form name="insert" method="POST" action="/../functions.php">
                 <div class="form-floating mb-3">
                   <input
+					name="username"
                     type="text"
                     class="form-control"
                     id="floatingInputUsername"
@@ -64,6 +65,7 @@
 
                 <div class="form-floating mb-3">
                   <input
+					name="email"
                     type="email"
                     class="form-control"
                     id="floatingInputEmail"
@@ -77,6 +79,7 @@
 
                 <div class="form-floating mb-3">
                   <input
+					name="password"
                     type="password"
                     class="form-control"
                     id="floatingPassword"
@@ -99,6 +102,7 @@
 
                 <div class="d-grid mb-2">
                   <button
+				  name="insert"
                     class="
                       btn btn-lg btn-primary btn-login
                       fw-bold
@@ -112,7 +116,7 @@
 
                 <a
                   class="d-block text-center mt-2 small"
-                  href="/login/login.html"
+                  href="/login/login.php"
                   >Have an account? Sign In</a
                 >
 

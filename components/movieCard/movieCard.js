@@ -9,12 +9,13 @@ template.innerHTML = `
     </div>
     <div class="info">
         <h3 class="title"></h3>
+		<p class="index" hidden></p>
         <p>
             <slot />
         </p>
         <div class="action_container">
-            <i class="isFavourite fa fa-heart"></i>
-            <i class="isBookmarked fas fa-bookmark"></i>
+            <a href="link" id="isFavourite"><i class="isFavourite fa fa-heart"></i></a>
+            <a href="link" id="isBookmarked"><i class="isBookmarked fas fa-bookmark"></i></a>
             <a target="_blank" class="button">IMDb</a>
         </div>
         <div class="bs-example">
@@ -35,7 +36,11 @@ class MovieCard extends HTMLElement {
     setTimeout(() => {
       this.shadowRoot.querySelector("h3.title").innerHTML =
         this.getAttribute("title");
+		this.shadowRoot.querySelector("p.index").innerHTML =
+        this.getAttribute("index");
       this.shadowRoot.querySelector("img").src = this.getAttribute("poster");
+	  this.shadowRoot.querySelector("#\\isFavourite").href = "functions.php?fav=1&id="+this.getAttribute("index");
+	  this.shadowRoot.querySelector("#\\isBookmarked").href = "functions.php?fav=2&id="+this.getAttribute("index");
       this.shadowRoot
         .querySelector(".button")
         .setAttribute(
